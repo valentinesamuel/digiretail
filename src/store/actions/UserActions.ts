@@ -5,9 +5,9 @@ import * as userActionTypes from "./UserActionTypes";
 export const GetUsers = () => async (dispatch: Dispatch<userActionTypes.UserDispatchTypes>) => {
 
       try {
-            dispatch({
-                  type: userActionTypes.USER_LOADING
-            })
+            // dispatch({
+            //       type: userActionTypes.USER_LOADING
+            // })
 
             const res = await axios.get("https://jsonplaceholder.typicode.com/users")
 

@@ -1,6 +1,7 @@
 export const USER_LOADING = "USER_LOADING"
 export const USER_FAIL = "USER_FAIL"
 export const USER_SUCCESS = "USER_SUCCESS"
+export const ADD_USER = "ADD_USER"
 
 
 export interface IUser {
@@ -25,5 +26,11 @@ export interface UserSuccess{
       type: typeof USER_SUCCESS,
       payload: IUser[]
 }
+export interface AddUser{
+      type: typeof ADD_USER,
+      payload: IUser[]
+}
 
-export type UserDispatchTypes = UserLoading | UserFail | UserSuccess
+
+
+export type UserDispatchTypes = UserLoading | UserFail | UserSuccess | AddUser 

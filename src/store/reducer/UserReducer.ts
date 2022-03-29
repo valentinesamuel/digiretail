@@ -1,5 +1,6 @@
 import { IUser } from "../actions/UserActionTypes"
 import * as userActionTypes from "../actions/UserActionTypes";
+const { v4: uuidv4 } = require('uuid');
 
 
 interface IDefaultState {
@@ -48,11 +49,20 @@ const UserReducer = (state: IDefaultState = defaultState, action: userActionType
                        loading:true,
                  }
            case userActionTypes.USER_SUCCESS:
-                 
                  return {
                        loading:false,
                        users: action.payload
                  }
+           case userActionTypes.ADD_USER:
+                 console.log("create new user here");
+                 
+            //      const newUser: IUser = {
+                    
+            //      }
+            //      return {
+            //            ...state,
+            //            users: action.payload.concat(newUser)
+            //      }
      
            default:
                 return state
